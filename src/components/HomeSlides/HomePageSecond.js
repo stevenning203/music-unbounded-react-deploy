@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import piano from '../../assets/piano2.jpg';
 import violin from '../../assets/violin.jpg';
 import trombone from '../../assets/trombone.jpg';
