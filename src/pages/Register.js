@@ -38,7 +38,7 @@ function GetThankYou()
 
 function Redirect()
 {
-    window.location.href = "/thank-you";
+    window.location.href = "/#/thank-you";
 }
 
 function HandleRegistration(e, FormArray)
