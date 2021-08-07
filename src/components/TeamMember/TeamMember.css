@@ -1,0 +1,29 @@
+.team-member-name
+{
+    padding-top: 3rem;
+}
+
+.team-member-image
+{
+    width: 30%;
+    margin: 1rem 0 1rem 0;
+}
+
+.team-member-blurb
+{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.team-member-title
+{
+    font-weight: bold;
+}
+
+.team-member
+{
+    text-align: center;
+    width: 50%;
+    height: 30rem;
+    display: inline-block;
+}

@@ -1,0 +1,57 @@
+#about-who-we-are-title
+{
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+#about-who-we-are-wrapper
+{
+    height: 100vh;
+    background-color:azure;
+}
+
+#about-who-we-are-blurb
+{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+
+#about-orchestra-image
+{
+    height: calc(100vh - 4.7rem);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+#about-image-wrapper
+{
+    background-color: azure;
+}
+
+#about-our-lessons-wrapper
+{
+    height: 100vh;
+    background-color: #343434;
+}
+
+#about-our-lessons-title
+{
+    margin-top: 3rem;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+}
+
+#about-our-lessons-blurb
+{
+    width: 60%;
+    margin-left: 20%;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    color: white;
+}

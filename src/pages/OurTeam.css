@@ -1,0 +1,18 @@
+#our-team-page-title
+{
+    margin-top: 3rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#our-team-page-catalog
+{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+#our-team-page-wrapper
+{
+    background-color: aliceblue;
+}

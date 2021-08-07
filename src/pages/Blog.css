@@ -1,0 +1,49 @@
+#blog-page-wrapper
+{
+    padding: 3rem 0 3rem 0;
+    background-color: aliceblue;
+}
+
+.blog-blurb
+{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.blog-wrapper
+{
+    width: 60%;
+    background-color: #343434;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem 0 1rem 0;
+    margin-left: 20%;
+}
+
+.blog-button
+{
+    background-color: white;
+    color: black;
+    width: 5rem;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    float: right;
+    margin-right: 1rem;
+    display: none;
+}
+
+.blog-title
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+.blog-date
+{
+    text-align: center;
+    color: #AAAAAA;
+    margin-bottom: 1rem;
+}

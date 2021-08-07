@@ -1,0 +1,20 @@
+#thank-you-page-title
+{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 5rem;
+    text-align: center;
+}
+
+#thank-you-page-blurb
+{
+    text-align: center;
+    font-size: 2rem;
+    width: 60%;
+    margin-left: 20%;
+}
+
+#ty-wrapper
+{
+    height: calc(100vh - 4.7rem)
+}

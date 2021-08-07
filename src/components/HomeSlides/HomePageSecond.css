@@ -1,0 +1,66 @@
+#home-page-second
+{
+    background-color: white;
+    min-height: 100vh;
+    background-size: 100%;
+}
+
+#home-page-second-catalog
+{
+    margin-top: 3rem;
+    margin-left: 20%;
+    margin: 3rem 0 5rem 20%;
+    width: 60%;
+}
+
+#home-page-second-title
+{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 3rem;
+}
+
+.accordian-title
+{
+    padding: 1rem;
+    display: inline-block;
+}
+
+.accordian
+{
+    width: 100%;
+    background-color: lavender;
+    cursor: pointer;
+    margin-bottom: 1px;
+}
+
+.accordian:hover
+{
+    background-color: rgb(224, 219, 255);
+}
+
+.accordian-button
+{
+    float: right;
+    padding: 1rem;
+}
+
+.accordian-content
+{
+    padding: 1rem;
+    border-top: 1px solid white;
+}
+
+.accordian-blurb-text
+{
+    text-align: center;
+    margin: 1rem 10% 1rem 10%;
+}
+
+.accordian-content img
+{
+    margin-top: 1rem;
+    width: 60%;
+    margin-left: 20%;
+    border-radius: 5px;
+}

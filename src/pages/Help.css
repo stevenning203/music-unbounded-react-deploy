@@ -1,0 +1,36 @@
+#faq-wrapper
+{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+}
+
+.faq-accordian-wrapper
+{
+    background-color: #EFEFEF;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+}
+
+.faq-accordian-title
+{
+    padding: 1rem;
+    float: left;
+}
+
+.faq-accordian-content
+{
+    padding: 1rem;
+    clear: both;
+    border-top: 0.5rem solid white;
+    background-color: aliceblue;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.faq-accordian-button
+{
+    float: right;
+    padding: 1rem;
+}

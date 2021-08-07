@@ -1,0 +1,48 @@
+#home-page-first
+{
+    height: calc(100vh - 4.7rem);
+    background-image: url(../../assets/phonograph.jpg);
+    background-size: auto 182%;
+    background-position: 0 -20rem;
+    text-align: center;
+}
+
+#home-page-first-title
+{
+    margin-top: 15vh;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#home-page-first-subtitle
+{
+    margin: 1rem 1rem 1rem 0;
+    font-size: 2rem;
+}
+
+#home-page-first-button-group
+{
+    margin: 2rem 0 0 0;
+}
+
+#home-page-first-register-button
+{
+    display: inline-block;
+    padding: 1rem;
+    background-color: white;
+    width: 4rem;
+    border-radius: 5px;
+    color: black;
+}
+
+#home-page-first-about-button
+{
+    display: inline-block;
+    padding: 1rem;
+    background-color: white;
+    margin-right: 1rem;
+    width: 4rem;
+    border-radius: 5px;
+    color: black;
+}

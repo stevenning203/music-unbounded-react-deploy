@@ -1,0 +1,34 @@
+#__footer
+{
+    height: 100vh;
+    background-color: lavender;
+}
+
+#__footer-title
+{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 3rem;
+    display: none;
+}
+
+#__footer-blurb
+{
+    margin-top: 3rem;
+    margin-left: 20%;
+    font-size: 1.5rem;
+    width: 60%;
+}
+
+#__footer-blurb a
+{
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: underline;
+}
+
+#__footer-logo
+{
+    width: 4.7rem;
+    margin-left: 20%;
+}
