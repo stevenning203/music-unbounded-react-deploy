@@ -18,7 +18,7 @@ function About()
                 passionate voluteers. We are a group of students hoping to spread our love for music.
                 <br />
                 <br />
-                Music has many benefits, ranging from brain growth and academic success to being a creative outlet and source of entertainment. We want to help young adults and children discover a desire to purse music and enjoy the many benefits there are.
+                Music has many benefits, ranging from brain growth and academic success to being a creative outlet and source of entertainment. We want to help youth discover a desire to pursue music and enjoy the many benefits there are.
             </div>
         </div>
         <div id = "about-our-lessons-wrapper">

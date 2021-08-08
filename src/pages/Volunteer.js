@@ -40,11 +40,23 @@ function Redirect()
     window.location.href = "/#/thank-you";
 }
 
-function HandleRegistration(e, FormArray)
+function HandleRegistration(e, FormArray, teacher_guidelines_read, checkbox_checked)
 {
     if (!CheckFormValidity(FormArray))
     {
         alert("Please fill all required fields")
+        return;
+    }
+
+    if (!teacher_guidelines_read)
+    {
+        alert("You did not open the teacher guidelines. Please open and read the teacher guidelines.");
+        return;
+    }
+
+    if (!checkbox_checked)
+    {
+        alert("You did not agree to the teacher guidelines. Please agree to them before submitting.");
         return;
     }
 
@@ -77,19 +89,62 @@ function Volunteer()
     const [preferred_instrument, SetPreferredInstrument] = useState("");
     const [platform, SetPlatform] = useState("");
     const [statement, SetStatement] = useState("");
-    const [show_success, SetShowSuccess] = useState(false);
+    const [show_teacher_guidelines, SetShowTeacherGuidelines] = useState(false);
+    const [teacher_guidelines_read, SetTeacherGuidelinesRead] = useState(false);
+    const [checkbox_checked, SetCheckboxChecked] = useState(false);
 
     function HandleSubmit(event)
     {
         event.preventDefault();
         const FormArray = [teacher_name, age, email, phone_number, contact_by_phone, preferred_instrument, platform, statement];
-        HandleRegistration(event, FormArray);
+        HandleRegistration(event, FormArray, teacher_guidelines_read, checkbox_checked);
+    }
+
+    function SetTeacherGuidelines()
+    {
+        SetShowTeacherGuidelines(true);
+        SetTeacherGuidelinesRead(true);
     }
 
     return (
         <div id = "register-page-wrapper">
             <div id = "register-title">Apply to be a Volunteer</div>
             <div id = "register-form">
+                { show_teacher_guidelines && 
+                <div id = "teacher-guidelines-modal">
+                    <div id = "teacher-guidelines-modal-title">
+                        Teacher Guidelines
+                    </div>
+                    <div id = "teacher-guidelines-modal-blurb">
+                        <ol id = "teacher-guidelines-modal-list">
+							<li>
+								The safety of you and students is the priority. If you are doing in person lessons, and wearing a mask is possible, please do so. 
+							</li>
+							<li>
+								No swearing or cursing in the lessons.  Usage of offensive language of any kind, including discriminatory phrases, is prohibited.
+							</li>
+							<li>
+								The student’s musical interests take priority over the interests of the teacher regarding the songs being learned and the style of music that the student wishes to learn.
+							</li>
+							<li>
+								Recording or taking pictures of a student without the permission of their legal guardians is prohibited 
+							</li>
+							<li>
+								Teachers should approach lessons with a positive attitude as they are reflecting the integrity of the organization.
+							</li>
+							<li>
+								Disciplinary measures should be avoided.  This includes yelling and the use of punishments.  When possible, the parent should be contacted in the event that disciplinary action may be required.
+							</li>
+							<li>
+								If you suspect your student is being abused or mistreated by their guardians, you must report this to an executive member.
+							</li>
+						</ol>
+                        <div onClick = {() => SetShowTeacherGuidelines(false)} id = "teacher-guidelines-modal-close-button">
+                            Close
+                        </div>
+                    </div>
+                </div>
+                }
                 <form id = "form-register-form" onSubmit = {HandleSubmit}>
                     <div>
                         <label htmlFor = "teacher-full-name-field">Teacher Full Name</label>
@@ -138,7 +193,14 @@ function Volunteer()
                         <br />
                         <textarea name = "statement" id = "lesson-times-field" className = "registration-wide-input-field" value = {statement} onChange = {(e) => SetStatement(e.target.value)} />
                     </div>
-                    <input onClick = {() => SetShowSuccess(true)} id = "submit-button" type = "submit" />
+                    <div>
+                        <input value = {checkbox_checked} onChange = {(e) => SetCheckboxChecked(!checkbox_checked)} id = "teacher-guidelines-checkbox" type = "checkbox" />
+                        <label htmlFor = "teacher-guidelines-checkbox"> I agree to the </label>
+                        <div id = "teacher-guidelines-trigger" onClick = {() => SetTeacherGuidelines()}>Teacher Guidelines</div>
+                        <br />
+                        <br />
+                    </div>
+                    <input id = "submit-button" type = "submit" />
                 </form>
             </div>
         </div>

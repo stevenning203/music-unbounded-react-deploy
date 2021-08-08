@@ -5,3 +5,66 @@
     margin-bottom: 3rem;
     text-align: center;
 }
+
+#teacher-guidelines-trigger
+{
+    cursor: pointer;
+    display: inline;
+    color: blue;
+}
+
+#teacher-guidelines-modal
+{
+    position: fixed;
+    left: auto;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10vh;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    height: 80vh;
+    text-align: center;
+}
+
+#teacher-guidelines-modal-title
+{
+    font-size: 1.5rem;
+    padding: 1rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+
+#teacher-guidelines-modal-blurb
+{
+    padding: 0rem 1rem 1rem 1rem;
+    overflow: visible;
+}
+
+#teacher-guidelines-modal-list li
+{
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    overflow: visible;
+    margin-left: 2rem;
+    text-align: left;
+}
+
+#teacher-guidelines-modal-list
+{
+    overflow: visible;
+}
+
+#teacher-guidelines-modal-close-button
+{
+    background-color: #EFEFEF;
+    padding: 1rem 1.25rem 1rem 1.25rem;
+    display: inline-block;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
