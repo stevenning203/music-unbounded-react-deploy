@@ -12,7 +12,7 @@ import IsMobile from '../IsMobile';
 import Help from './Help';
 import Footer from '../components/Footer/Footer';
 import './Navbar.css';
-import { BrowserRouter as R, HashRouter as Router, Link, Switch, Route, Redirect} from 'react-router-dom';
+import { BrowserRouter as Router, Link, Switch, Route, Redirect} from 'react-router-dom';
 
 function Web()
 {
@@ -108,17 +108,6 @@ function Web()
             </Switch>
             <Footer />
         </Router>
-        <R>
-            <Switch>
-                <Redirect from = "/about" to = "/#/about" />
-                <Redirect from = "/register" to = "/#/register" />
-                <Redirect from = "/our-team" to = "/#/our-team" />
-                <Redirect from = "/volunteer" to = "/#/volunteer" />
-                <Redirect from = "/thank-you" to = "/#/thank-you" />
-                <Redirect from = "/help" to = "/#/help" />
-                <Redirect from = "/blog" to = "/#/blog" />
-            </Switch>
-        </R>
         </>
     )
 }
