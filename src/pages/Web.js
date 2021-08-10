@@ -6,18 +6,20 @@ import OurTeam from './OurTeam';
 import Volunteer from './Volunteer';
 import ThankYou from './ThankYou';
 import Blog from './Blog';
+import NotFound from './NotFound';
 import logo from '../assets/logo.svg';
 import IsMobile from '../IsMobile';
 import Help from './Help';
 import Footer from '../components/Footer/Footer';
 import './Navbar.css';
-import { HashRouter as Router, Link, Switch, Route} from 'react-router-dom';
+import { BrowserRouter as R, HashRouter as Router, Link, Switch, Route, Redirect} from 'react-router-dom';
 
 function Web()
 {
     const [navbar_open, SetNavbarOpen] = useState(false);
 
     return(
+        <>
         <Router>
             <nav>
                 <div id = 'navbar-wrapper'>
@@ -102,9 +104,22 @@ function Web()
                 <Route path = "/blog">
                     <Blog />
                 </Route>
+                <Route path = "*" exact = {true} component = {NotFound} />
             </Switch>
             <Footer />
         </Router>
+        <R>
+            <Switch>
+                <Redirect from = "/about" to = "/#/about" />
+                <Redirect from = "/register" to = "/#/register" />
+                <Redirect from = "/our-team" to = "/#/our-team" />
+                <Redirect from = "/volunteer" to = "/#/volunteer" />
+                <Redirect from = "/thank-you" to = "/#/thank-you" />
+                <Redirect from = "/help" to = "/#/help" />
+                <Redirect from = "/blog" to = "/#/blog" />
+            </Switch>
+        </R>
+        </>
     )
 }
 
