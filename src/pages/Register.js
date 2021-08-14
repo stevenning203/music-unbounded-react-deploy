@@ -16,11 +16,11 @@ function CheckFormValidity(FormArray)
 
 function GetBody(FormArray)
 {
-    const label_array = ["Guardian Name", "Student Name", "Email", "Phone number", "Please contact by phone number", "Preferred lesson platform", "Instrument", "Found out about us from", "Statement about lesson times"];
+    const label_array = ["Guardian Name", "Student Name", "Email", "Phone number", "Please contact by phone number", "Preferred lesson platform", "Preferred lesson delivery method", "Instrument", "Found out about us from", "Statement about lesson times"];
 
     let body = "";
 
-    for (let i = 0; i < 9; i++)
+    for (let i = 0; i < 10; i++)
     {
         body += "<strong>" + label_array[i] + "</strong>" + ": " + FormArray[i] + "<br><br>";
     }
@@ -38,7 +38,7 @@ function GetThankYou()
 
 function Redirect()
 {
-    window.location.href = "/#/thank-you";
+    window.location.href = "/thank-you";
 }
 
 function HandleRegistration(e, FormArray)
@@ -76,6 +76,7 @@ export default function Register()
     const [phone_number, SetPhoneNumber] = useState("");
     const [contact_by_phone, SetContactByPhone] = useState(false);
     const [preferred_platform, SetPreferredPlatform] = useState("");
+    const [preferred_location, SetPreferredLocation] = useState("");
     const [preferred_instrument, SetPreferredInstrument] = useState("");
     const [platform, SetPlatform] = useState("");
     const [lesson_times, SetLessonTimes] = useState("");
@@ -84,7 +85,7 @@ export default function Register()
     function HandleSubmit(event)
     {
         event.preventDefault();
-        const FormArray = [guardian_full_name, student_full_name, email, phone_number, contact_by_phone, preferred_platform, preferred_instrument, platform, lesson_times];
+        const FormArray = [guardian_full_name, student_full_name, email, phone_number, contact_by_phone, preferred_platform, preferred_location, preferred_instrument, platform, lesson_times];
         HandleRegistration(event, FormArray);
 
     }
@@ -127,7 +128,17 @@ export default function Register()
                         <input name = "lesson_platform" id = "preferred-platform-field" className = "registration-wide-input-field" type = "text" value = {preferred_platform} onChange = {(e) => SetPreferredPlatform(e.target.value)} />
                     </div>
                     <div>
-                        <label htmlFor = "preferred-instrument-field">Preferred Instrument -- Piano is currently full. If registering for piano, you may not be assigned a teacher until a spot is available.</label>
+                        <label htmlFor = "preferred-location-field">Would you prefer to have your lessons in person or online? &sup1;</label>
+                        <br />
+                        <select name = "location" id = "preferred-location-field" className = "registration-wide-input-field" value = {preferred_location} onChange = {(e) => SetPreferredLocation(e.target.value)}>
+                            <option value = "">Select an option</option>
+                            <option value = "in_person">In person</option>
+                            <option value = "onlie">Online</option>
+                            <option value = "either">Either is fine</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label htmlFor = "preferred-instrument-field">Preferred Instrument &sup2;</label>
                         <select id = "preferred-instrument-field" name = "preferred_instrument" className = "registration-wide-input-field" value = {preferred_instrument} required="" onChange = {(e) => SetPreferredInstrument(e.target.value)}>
                             <option value="">Select an option</option>
                             <option value="viola">Viola</option>
@@ -156,6 +167,14 @@ export default function Register()
                         <br />
                         <textarea name = "lesson_statement" id = "lesson-times-field" className = "registration-wide-input-field" value = {lesson_times} onChange = {(e) => SetLessonTimes(e.target.value)} />
                     </div>
+                    <div>
+                        &sup1;  Note: If you select "either is fine," you will be more likely to be matched up. Additonally, in person lessons will be held at either the student's household or the teacher's. The location will be decided when we reach your application.
+                        <br />
+                        <br />
+                        &sup2; Note: Piano is currently full. If registering for piano, you may not be assigned a teacher until a spot is available.
+                        <br />
+                    </div>
+                    <br />
                     <input onClick = {() => SetShowSuccess(true)} id = "submit-button" type = "submit" />
                 </form>
             </div>
