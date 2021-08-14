@@ -128,7 +128,7 @@ export default function Register()
                     </div>
                     <div>
                         <label htmlFor = "preferred-instrument-field">Preferred Instrument -- Piano is currently full. If registering for piano, you may not be assigned a teacher until a spot is available.</label>
-                        <select name = "preferred_instrument" className = "registration-wide-input-field" value = {preferred_instrument} required="" onChange = {(e) => SetPreferredInstrument(e.target.value)}>
+                        <select id = "preferred-instrument-field" name = "preferred_instrument" className = "registration-wide-input-field" value = {preferred_instrument} required="" onChange = {(e) => SetPreferredInstrument(e.target.value)}>
                             <option value="">Select an option</option>
                             <option value="viola">Viola</option>
                             <option value="violin">Violin</option>
@@ -140,8 +140,8 @@ export default function Register()
                         </select>
                     </div>
                     <div>
-                        <label htmlFor = "preferred-instrument-field">How did you find out about us?</label>
-                        <select name = "platform" className = "registration-wide-input-field" value = {platform} onChange = {(e) => SetPlatform(e.target.value)}>
+                        <label htmlFor = "platform-field">How did you find out about us?</label>
+                        <select id = "platform-field" name = "platform" className = "registration-wide-input-field" value = {platform} onChange = {(e) => SetPlatform(e.target.value)}>
                             <option value="">Select an option</option>
                             <option value="kijiji">Kijiji</option>
                             <option value="social_media">Social Media</option>

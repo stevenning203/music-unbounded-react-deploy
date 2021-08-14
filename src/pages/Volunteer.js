@@ -174,11 +174,11 @@ function Volunteer()
                     </div>
                     <div>
                         <label htmlFor = "preferred-instrument-field">What instrument(s) would you like to teach?</label>
-                        <input name = "preferred_instrument" className = "registration-wide-input-field" value = {preferred_instrument} onChange = {(e) => SetPreferredInstrument(e.target.value)} />
+                        <input id = "preferred-instrument-field" name = "preferred_instrument" className = "registration-wide-input-field" value = {preferred_instrument} onChange = {(e) => SetPreferredInstrument(e.target.value)} />
                     </div>
                     <div>
-                        <label htmlFor = "preferred-instrument-field">How did you find out about us?</label>
-                        <select name = "platform" className = "registration-wide-input-field" value = {platform} onChange = {(e) => SetPlatform(e.target.value)}>
+                        <label htmlFor = "platform-field">How did you find out about us?</label>
+                        <select id = "platform-field" name = "platform" className = "registration-wide-input-field" value = {platform} onChange = {(e) => SetPlatform(e.target.value)}>
                             <option value="">Select an option</option>
                             <option value="kijiji">Kijiji</option>
                             <option value="social_media">Social Media</option>

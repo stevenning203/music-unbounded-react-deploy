@@ -8,6 +8,7 @@ import ThankYou from './ThankYou';
 import Blog from './Blog';
 import NotFound from './NotFound';
 import logo from '../assets/logo.svg';
+import old_logo from '../assets/logo.png';
 import IsMobile from '../IsMobile';
 import Help from './Help';
 import Footer from '../components/Footer/Footer';
@@ -23,7 +24,7 @@ function Web()
         <Router>
             <nav>
                 <div id = 'navbar-wrapper'>
-                    <Link to = '/'><img id = 'logo' src = {logo} /></Link>
+                    <Link to = '/'><img id = 'logo' src = {old_logo} /></Link>
                     {!IsMobile() && <ul id = "centered-navbar">
                         <li>
                             <Link to = '/about'>About</Link>

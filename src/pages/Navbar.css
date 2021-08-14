@@ -8,7 +8,9 @@
 #logo
 {
     float: left;
-    height: 4.7rem;
+    height: 1.5rem;
+    background-color: skyblue;
+    padding: 1.6rem 1.1rem 1.6rem 1.1rem;
 }
 
 #centered-navbar

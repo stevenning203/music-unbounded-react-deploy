@@ -29,6 +29,8 @@
 
 #__footer-logo
 {
-    width: 4.7rem;
+    height: 1.5rem;
     margin-left: 20%;
+    padding: 1.6rem 1.1rem 1.6rem 1.1rem;
+    background-color: skyblue;
 }
