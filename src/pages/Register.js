@@ -80,14 +80,12 @@ export default function Register()
     const [preferred_instrument, SetPreferredInstrument] = useState("");
     const [platform, SetPlatform] = useState("");
     const [lesson_times, SetLessonTimes] = useState("");
-    const [show_success, SetShowSuccess] = useState(false);
 
     function HandleSubmit(event)
     {
         event.preventDefault();
         const FormArray = [guardian_full_name, student_full_name, email, phone_number, contact_by_phone, preferred_platform, preferred_location, preferred_instrument, platform, lesson_times];
         HandleRegistration(event, FormArray);
-
     }
 
     return (
@@ -95,7 +93,6 @@ export default function Register()
             <div id = "register-title">Register</div>
             <div id = "register-form">
                 <form onSubmit = {HandleSubmit}>
-                    {show_success && <div>Hello!</div>}
                     <div>
                         <label htmlFor = "guardian-full-name-field">Guardian Full Name</label>
                         <br />
@@ -175,7 +172,7 @@ export default function Register()
                         <br />
                     </div>
                     <br />
-                    <input onClick = {() => SetShowSuccess(true)} id = "submit-button" type = "submit" />
+                    <input id = "submit-button" type = "submit" />
                 </form>
             </div>
         </div>
