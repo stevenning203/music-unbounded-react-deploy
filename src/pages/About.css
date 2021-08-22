@@ -31,6 +31,7 @@
 #about-image-wrapper
 {
     background-color: azure;
+    overflow: hidden;
 }
 
 #about-our-lessons-wrapper
