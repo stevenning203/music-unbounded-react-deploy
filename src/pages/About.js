@@ -15,7 +15,7 @@ function About()
             </div>
             <div id = "about-who-we-are-blurb">
                 Music Unbounded is a non-profit organization aimed at providing an opportunity to students K-9 to learn music through free introductory lessons instructed by
-                passionate voluteers. We are a group of students hoping to spread our love for music.
+                passionate volunteers. We are a group of students hoping to spread our love for music.
                 <br />
                 <br />
                 Music has many benefits, ranging from brain growth and academic success to being a creative outlet and source of entertainment. We want to help youth discover a desire to pursue music and enjoy the many benefits there are.
