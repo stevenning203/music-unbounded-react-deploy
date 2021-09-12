@@ -4,6 +4,7 @@ import About from './About';
 import Register from './Register';
 import OurTeam from './OurTeam';
 import Volunteer from './Volunteer';
+import Contact from './Contact';
 import ThankYou from './ThankYou';
 import Blog from './Blog';
 import NotFound from './NotFound';
@@ -36,9 +37,11 @@ function Web()
                             <Link to = '/volunteer'>Volunteer</Link>
                         </li>
                         <li>
+                            <Link to = '/contact'>Contact</Link>
+                        </li>
+                        <li>
                             <Link to = '/our-team'>Our Team</Link>
                         </li>
-                        
                         <li>
                             <Link to = '/help'>Help</Link>
                         </li>
@@ -67,9 +70,11 @@ function Web()
                             <Link to = '/volunteer'>Volunteer</Link>
                         </li>
                         <li>
+                            <Link to = '/contact'>Contact</Link>
+                        </li>
+                        <li>
                             <Link to = '/our-team'>Our Team</Link>
                         </li>
-                        
                         <li>
                             <Link to = '/help'>Help</Link>
                         </li>
@@ -95,6 +100,9 @@ function Web()
                 </Route>
                 <Route path = "/volunteer">
                     <Volunteer />
+                </Route>
+                <Route path = "/contact">
+                    <Contact />
                 </Route>
                 <Route path = "/thank-you">
                     <ThankYou />

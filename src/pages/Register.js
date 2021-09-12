@@ -165,6 +165,9 @@ export default function Register()
                         <textarea name = "lesson_statement" id = "lesson-times-field" className = "registration-wide-input-field" value = {lesson_times} onChange = {(e) => SetLessonTimes(e.target.value)} />
                     </div>
                     <div>
+                        * Note: all fields are required except phone number
+                        <br />
+                        <br />
                         &sup1;  Note: If you select "either is fine," you will be more likely to be matched up. Additonally, in person lessons will be held at either the student's household or the teacher's. If in person is selected, the location will be decided by the student and the teacher together.
                         <br />
                         <br />
