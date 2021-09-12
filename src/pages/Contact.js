@@ -107,6 +107,7 @@ export default function Contact()
                     <option value="">Select an option</option>
                     <option value="General Question">General question</option>
                     <option value="Request for update">Request for update on registration status</option>
+                    <option value="Request for lessons, etc">Request regarding lessons</option>
                     <option value="Comment">Comment</option>
                     <option value="Other">Other</option>
                 </select>
