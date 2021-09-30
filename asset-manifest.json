@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.841a193e.chunk.css",
-    "main.js": "/static/js/main.8ede9ca6.chunk.js",
-    "main.js.map": "/static/js/main.8ede9ca6.chunk.js.map",
+    "main.css": "/static/css/main.5ef98709.chunk.css",
+    "main.js": "/static/js/main.2611a2f3.chunk.js",
+    "main.js.map": "/static/js/main.2611a2f3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d2179b02.js",
     "runtime-main.js.map": "/static/js/runtime-main.d2179b02.js.map",
-    "static/js/2.9a57ff9c.chunk.js": "/static/js/2.9a57ff9c.chunk.js",
-    "static/js/2.9a57ff9c.chunk.js.map": "/static/js/2.9a57ff9c.chunk.js.map",
+    "static/js/2.fb614ed4.chunk.js": "/static/js/2.fb614ed4.chunk.js",
+    "static/js/2.fb614ed4.chunk.js.map": "/static/js/2.fb614ed4.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.841a193e.chunk.css.map": "/static/css/main.841a193e.chunk.css.map",
-    "static/js/2.9a57ff9c.chunk.js.LICENSE.txt": "/static/js/2.9a57ff9c.chunk.js.LICENSE.txt",
+    "static/css/main.5ef98709.chunk.css.map": "/static/css/main.5ef98709.chunk.css.map",
+    "static/js/2.fb614ed4.chunk.js.LICENSE.txt": "/static/js/2.fb614ed4.chunk.js.LICENSE.txt",
     "static/media/alex_cai.cb4d206d.png": "/static/media/alex_cai.cb4d206d.png",
     "static/media/andrew_zhang.ed3bbc3e.png": "/static/media/andrew_zhang.ed3bbc3e.png",
     "static/media/binoo.189d1b50.png": "/static/media/binoo.189d1b50.png",
@@ -31,8 +31,9 @@
     "static/media/logo.8cb27502.svg": "/static/media/logo.8cb27502.svg",
     "static/media/marcus_wong.b54a4374.png": "/static/media/marcus_wong.b54a4374.png",
     "static/media/mark_maclure.94382b31.png": "/static/media/mark_maclure.94382b31.png",
-    "static/media/orchestra.8f22102b.jpg": "/static/media/orchestra.8f22102b.jpg",
+    "static/media/About.css": "/static/media/orchestra.8f22102b.jpg",
     "static/media/HomePageFirst.css": "/static/media/phonograph.234199cf.jpg",
+    "static/media/piano.a15e1a36.jpg": "/static/media/piano.a15e1a36.jpg",
     "static/media/piano2.e96886da.jpg": "/static/media/piano2.e96886da.jpg",
     "static/media/ryan_li.d78704a1.png": "/static/media/ryan_li.d78704a1.png",
     "static/media/savannah_seibel.9c4b0876.png": "/static/media/savannah_seibel.9c4b0876.png",
@@ -43,8 +44,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d2179b02.js",
-    "static/js/2.9a57ff9c.chunk.js",
-    "static/css/main.841a193e.chunk.css",
-    "static/js/main.8ede9ca6.chunk.js"
+    "static/js/2.fb614ed4.chunk.js",
+    "static/css/main.5ef98709.chunk.css",
+    "static/js/main.2611a2f3.chunk.js"
   ]
 }
