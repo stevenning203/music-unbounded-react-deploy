@@ -1,6 +1,8 @@
 import React from 'react';
 import orchestra from '../assets/orchestra.jpg';
+import piano0 from '../assets/piano.jpg';
 import Footer from '../components/Footer/Footer';
+import IsMobile from '../IsMobile';
 import './About.css'
 
 function About()
@@ -8,30 +10,33 @@ function About()
 
     return(
         <>
-        <div id = "about-image-wrapper"><img id = "about-orchestra-image" src = {orchestra} /></div>
         <div id = "about-who-we-are-wrapper">
             <div id = "about-who-we-are-title">
                 Who We Are
             </div>
             <div id = "about-who-we-are-blurb">
-                Music Unbounded is a non-profit organization aimed at providing an opportunity to students K-9 to learn music through free introductory lessons instructed by
-                passionate volunteers. We are a group of students hoping to spread our love for music.
-                <br />
-                <br />
-                Music has many benefits, ranging from brain growth and academic success to being a creative outlet and source of entertainment. We want to help youth discover a desire to pursue music and enjoy the many benefits there are.
+                Music Unbounded is a student-run organization aimed at providing an opportunity for children and youth K-9 to learn music through free introductory lessons instructed by passionate volunteers. 
             </div>
         </div>
-        <div id = "about-our-lessons-wrapper">
-            <div id = "about-our-lessons-title">
-                Our Lessons
+        {!IsMobile() && <div id = "about-why-wrapper-pc">
+            {<img id = "about-why-image" src = {piano0} />}
+                <div id = "about-why-inner-wrapper">
+                <div id = "about-why-title">
+                    Why We Started Music Unbounded
+                </div>
+                <div id = "about-why-blurb">
+                    Music has many benefits, ranging from brain growth and academic success to being a creative outlet and source of entertainment. Each and every teacher, volunteer, and board member here at Music Unbounded have been positively influenced throughout their life through music. We are all very grateful to have been given this opportunity to learn, however, we recognize that the cost of learning music can be prohibitive for some and we hope to use our passion to make music accessible to everyone.
+                </div>
             </div>
-            <div id = "about-our-lessons-blurb">
-                45 minute lessons are arranged between student and teacher and occur bi-weekly. Each student is taught for 5 months, after which the student graduates and can purse music through self-teaching or private lessons. Our teachers follow a curriculum that will help your child learn.
-                <br />
-                <br />
-                We currently only operate online. However, we are exploring in-person options for lessons and recitals. If you have any questions about lessons, please contact us at info@musicunbounded.org
+        </div>}
+        {IsMobile() && <div id = "about-why-wrapper-mobile">
+            <div id = "about-why-title">
+                Why We Started Music Unbounded
             </div>
-        </div>
+            <div id = "about-why-blurb">
+                Music has many benefits, ranging from brain growth and academic success to being a creative outlet and source of entertainment. Each and every teacher, volunteer, and board member here at Music Unbounded have been positively influenced throughout their life through music. We are all very grateful to have been given this opportunity to learn, however, we recognize that the cost of learning music can be prohibitive for some and we hope to use our passion to make music accessible to everyone.
+            </div>
+        </div>}
         </>
     )
 }

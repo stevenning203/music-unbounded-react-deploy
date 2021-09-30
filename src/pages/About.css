@@ -1,14 +1,58 @@
 #about-who-we-are-title
 {
-    margin-top: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     text-align: center;
     font-size: 3rem;
+    background-image: url(../assets/orchestra.jpg);
+    color: white;
+}
+
+#about-why-inner-wrapper
+{
+    display: inline-block;
+    width: 50%;
+    margin-left: 3rem;
+    vertical-align: top;
+}
+
+#about-why-image
+{
+    border-radius: 1rem;
+    width: 40%;
+    margin: 2% 0 0 2%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+#about-why-blurb
+{
+    font-size: 1.5rem;
+}
+
+#about-why-title
+{
+    font-size: 3rem;
+    margin: 3rem 0 3rem 0;
+}
+
+#about-why-wrapper-pc
+{
+    margin-bottom: 3rem;
+}
+
+#about-why-wrapper-mobile
+{
+    margin-bottom: 3rem;
+    width: 60%;
+    margin-left: 20%;
 }
 
 #about-who-we-are-wrapper
 {
-    height: 100vh;
     background-color:azure;
+    padding-bottom: 3rem;
+    max-height: 32rem;
 }
 
 #about-who-we-are-blurb
@@ -21,17 +65,19 @@
 
 #about-orchestra-image
 {
-    height: calc(100vh - 4.7rem);
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: block;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 #about-image-wrapper
 {
     background-color: azure;
     overflow: hidden;
+    max-height: 25vh;
 }
 
 #about-our-lessons-wrapper

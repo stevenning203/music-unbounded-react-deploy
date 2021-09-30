@@ -170,9 +170,6 @@ export default function Register()
                         <br />
                         &sup1;  Note: If you select "either is fine," you will be more likely to be matched up. Additonally, in person lessons will be held at either the student's household or the teacher's. If in person is selected, the location will be decided by the student and the teacher together.
                         <br />
-                        <br />
-                        &sup2; Note: Piano is currently full. If registering for piano, you may not be assigned a teacher until a spot is available.
-                        <br />
                     </div>
                     <br />
                     <input id = "submit-button" type = "submit" />

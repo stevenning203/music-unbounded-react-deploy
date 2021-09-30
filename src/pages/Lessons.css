@@ -1,0 +1,35 @@
+.lessons-subtitle
+{
+    font-weight: bold;
+    margin-left: 20%;
+    width: 60%;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#lessons-title
+{
+    text-align: center;
+    font-size: 3rem;
+    margin: 3rem 0 3rem 0;
+}
+
+.lessons-blurb
+{
+    margin-left: 20%;
+    width: 60%;
+    margin-bottom: 2.5rem;
+    font-size: 1.25rem;
+}
+
+.lessons-register-button
+{
+    margin-top: 1rem;
+    color: white;
+    padding: 1rem;
+    background-color: skyblue;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 1rem;
+    font-weight: bolder;
+}

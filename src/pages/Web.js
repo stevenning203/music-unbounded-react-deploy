@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Home from './Home';
 import About from './About';
+import Lessons from './Lessons';
 import Register from './Register';
 import OurTeam from './OurTeam';
 import Volunteer from './Volunteer';
@@ -31,6 +32,9 @@ function Web()
                             <Link to = '/about'>About</Link>
                         </li>
                         <li>
+                            <Link to = '/lessons'>Lessons</Link>
+                        </li>
+                        <li>
                             <Link to = '/register'>Register</Link>
                         </li>
                         <li>
@@ -44,9 +48,6 @@ function Web()
                         </li>
                         <li>
                             <Link to = '/help'>Help</Link>
-                        </li>
-                        <li>
-                            <Link to = '/blog'>Blog</Link>
                         </li>
                     </ul>}
                     {
@@ -64,6 +65,9 @@ function Web()
                             <Link to = '/about'>About</Link>
                         </li>
                         <li>
+                            <Link to = '/lessons'>Lessons</Link>
+                        </li>
+                        <li>
                             <Link to = '/register'>Register</Link>
                         </li>
                         <li>
@@ -78,9 +82,6 @@ function Web()
                         <li>
                             <Link to = '/help'>Help</Link>
                         </li>
-                        <li>
-                            <Link to = '/blog'>Blog</Link>
-                        </li>
                     </ul>
                 </div>
                 }
@@ -91,6 +92,9 @@ function Web()
                 </Route>
                 <Route path = "/about">
                     <About />
+                </Route>
+                <Route path = "/lessons">
+                    <Lessons />
                 </Route>
                 <Route path = "/register">
                     <Register />

@@ -1,4 +1,32 @@
-#volunteer-title
+#volunteer-form
+{
+    width: 60%;
+    margin-left: 20%;
+}
+
+.volunteer-subtitle
+{
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+    font-weight: bold;
+    margin-left: 20%;
+}
+
+#volunteer-req-subtitle
+{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.volunteer-req
+{
+    margin-bottom: 2.5rem;
+    font-size: 1.25rem;
+    margin-left: 20%;
+    width: 60%;
+}
+
+.volunteer-title
 {
     margin-top: 3rem;
     font-size: 3rem;

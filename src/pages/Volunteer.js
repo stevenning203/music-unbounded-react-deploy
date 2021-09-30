@@ -107,9 +107,27 @@ function Volunteer()
     }
 
     return (
-        <div id = "register-page-wrapper">
-            <div id = "register-title">Apply to be a Volunteer</div>
-            <div id = "register-form">
+        <div id = "volunteer-page-wrapper">
+            <div className = "volunteer-title">
+                Volunteer With Us!
+            </div>
+            <div className = "volunteer-req">
+            We are looking for volunteers passionate about their instrument to teach with us! <br /> <br />
+<div id = "volunteer-req-subtitle">
+Benefits of volunteering with us: <br /><br />
+</div>
+- Professional training in our teacher’s workshops<br />
+- Personalized letter of recommendation<br />
+- Volunteer hours<br />
+- Experience working with children<br />
+- Flexible teaching that matches your schedule <br />
+- Making a difference in your community
+            </div>
+            <div className = "volunteer-req">
+                All teachers that apply undergo a short interview and audition process.
+            </div>
+            <div className = "volunteer-title">Application Form</div>
+            <div id = "volunteer-form">
                 { show_teacher_guidelines && 
                 <div id = "teacher-guidelines-modal">
                     <div id = "teacher-guidelines-modal-title">
