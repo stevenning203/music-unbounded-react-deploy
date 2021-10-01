@@ -7,11 +7,13 @@ function HomePageFirst()
     return(
         <div id = "home-page-first">
             <div id = "home-page-first-blurb">
-                <h1 id = "home-page-first-title">
-                    Music Unbounded
-                </h1>
-                <div id = "home-page-first-subtitle">
-                    Providing every child with a musical future
+                <div id = "home-page-first-alpha-group">
+                    <h1 id = "home-page-first-title">
+                        Music Unbounded
+                    </h1>
+                    <div id = "home-page-first-subtitle">
+                        Providing every child with a musical future
+                    </div>
                 </div>
                 <br />
                 <div id = "home-page-first-button-group">

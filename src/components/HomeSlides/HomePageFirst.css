@@ -1,18 +1,29 @@
 #home-page-first
 {
     height: calc(100vh - 4.7rem);
-    background-image: url(../../assets/phonograph.jpg);
+    background-image: url(../../assets/main_background.png);
     background-size: auto 182%;
     background-position: 0 -20rem;
     text-align: center;
 }
 
+#home-page-first-alpha-group
+{
+    background-color: rgba(255, 255, 255, 0.75);
+    display: inline-block;
+    margin-top: 15vh;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
 #home-page-first-title
 {
-    margin-top: 15vh;
     font-size: 4rem;
     font-weight: bold;
     text-transform: uppercase;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 #home-page-first-subtitle
