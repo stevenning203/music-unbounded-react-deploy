@@ -9,13 +9,12 @@ import Contact from './Contact';
 import ThankYou from './ThankYou';
 import Blog from './Blog';
 import NotFound from './NotFound';
-import logo from '../assets/logo.svg';
 import old_logo from '../assets/logo.png';
 import IsMobile from '../IsMobile';
 import Help from './Help';
 import Footer from '../components/Footer/Footer';
 import './Navbar.css';
-import { BrowserRouter as Router, Link, Switch, Route, Redirect} from 'react-router-dom';
+import { BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 
 function Web()
 {

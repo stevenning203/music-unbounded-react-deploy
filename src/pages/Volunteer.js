@@ -79,6 +79,16 @@ function HandleRegistration(e, FormArray, teacher_guidelines_read, checkbox_chec
         }).then(() => Redirect());
 }
 
+function SubmitApplication(e)
+{
+    const form = document.forms['sheets-form-app'];
+    e.preventDefault();
+    fetch("https://script.google.com/macros/s/AKfycbwuX-nKLoOjNGFtRTUWZXWyEeGKH9B2opIz_M72P1Sk3SOyE_AI3XR3Uzm8c9b6paEhzQ/exec",
+    {method: 'POST', body: new FormData(form)})
+    .then(Redirect())
+    .catch()
+}
+
 function Volunteer()
 {
     const [teacher_name, SetTeacherName] = useState("");
@@ -93,13 +103,6 @@ function Volunteer()
     const [teacher_guidelines_read, SetTeacherGuidelinesRead] = useState(false);
     const [checkbox_checked, SetCheckboxChecked] = useState(false);
 
-    function HandleSubmit(event)
-    {
-        event.preventDefault();
-        const FormArray = [teacher_name, age, email, phone_number, contact_by_phone, preferred_instrument, platform, statement];
-        HandleRegistration(event, FormArray, teacher_guidelines_read, checkbox_checked);
-    }
-
     function SetTeacherGuidelines()
     {
         SetShowTeacherGuidelines(true);
@@ -113,15 +116,15 @@ function Volunteer()
             </div>
             <div className = "volunteer-req">
             We are looking for volunteers passionate about their instrument to teach with us! <br /> <br />
-<div id = "volunteer-req-subtitle">
-Benefits of volunteering with us: <br /><br />
-</div>
-- Professional training in our teacher’s workshops<br />
-- Personalized letter of recommendation<br />
-- Volunteer hours<br />
-- Experience working with children<br />
-- Flexible teaching that matches your schedule <br />
-- Making a difference in your community
+            <div id = "volunteer-req-subtitle">
+            Benefits of volunteering with us: <br /><br />
+            </div>
+            - Professional training in our teacher’s workshops<br />
+            - Personalized letter of recommendation<br />
+            - Volunteer hours<br />
+            - Experience working with children<br />
+            - Flexible teaching that matches your schedule <br />
+            - Making a difference in your community
             </div>
             <div className = "volunteer-req">
                 All teachers that apply undergo a short interview and audition process.
@@ -163,40 +166,40 @@ Benefits of volunteering with us: <br /><br />
                     </div>
                 </div>
                 }
-                <form id = "form-register-form" onSubmit = {HandleSubmit}>
+                <form name = "sheets-form-app" id = "form-register-form" method = "POST" onSubmit = {SubmitApplication}>
                     <div>
                         <label htmlFor = "teacher-full-name-field">Teacher Full Name</label>
                         <br />
-                        <input id = "teacher-full-name-field" className = "registration-wide-input-field" name = "teacher_name" type = "text" value = {teacher_name} onChange = {(e) => SetTeacherName(e.target.value)} />
+                        <input id = "teacher-full-name-field" className = "registration-wide-input-field" name = "Teacher Name" type = "text" value = {teacher_name} onChange = {(e) => SetTeacherName(e.target.value)} />
                     </div>
                     <div>
                         <label htmlFor = "email-field">Email</label>
                         <br />
-                        <input name = "email" id = "email-field" className = "registration-wide-input-field" type = "text" value = {email} onChange = {(e) => SetEmail(e.target.value)} />
+                        <input name = "Email" id = "email-field" className = "registration-wide-input-field" type = "text" value = {email} onChange = {(e) => SetEmail(e.target.value)} />
                     </div>
                     <div>
                         <label htmlFor = "age-field">Age</label>
                         <br />
-                        <input name = "age" id = "age-field" className = "registration-wide-input-field" type = "text" value = {age} onChange = {(e) => SetAge(e.target.value)} />
+                        <input name = "Age" id = "age-field" className = "registration-wide-input-field" type = "text" value = {age} onChange = {(e) => SetAge(e.target.value)} />
                     </div>
                     <div>
                         <label htmlFor = "phone-number-field">Phone Number (optional)</label>
                         <br />
-                        <input name = "phone_number" id = "phone-number-field" className = "registration-wide-input-field" type = "text" value = {phone_number} onChange = {(e) => SetPhoneNumber(e.target.value)} />
+                        <input name = "Phone Number" id = "phone-number-field" className = "registration-wide-input-field" type = "text" value = {phone_number} onChange = {(e) => SetPhoneNumber(e.target.value)} />
                     </div>
                     <div>
-                        <input name = "contact_by_phone" id = "phone-checkbox" type = "checkbox" value = {contact_by_phone} onChange = {(e) => SetContactByPhone(!contact_by_phone)} />
+                        <input name = "Contact by PN?" id = "phone-checkbox" type = "checkbox" value = {contact_by_phone} onChange = {(e) => SetContactByPhone(!contact_by_phone)} />
                         <label htmlFor = "phone-checkbox"> I would prefer to be contacted by phone</label>
                         <br />
                         <br />
                     </div>
                     <div>
                         <label htmlFor = "preferred-instrument-field">What instrument(s) would you like to teach?</label>
-                        <input id = "preferred-instrument-field" name = "preferred_instrument" className = "registration-wide-input-field" value = {preferred_instrument} onChange = {(e) => SetPreferredInstrument(e.target.value)} />
+                        <input id = "preferred-instrument-field" name = "Instrument" className = "registration-wide-input-field" value = {preferred_instrument} onChange = {(e) => SetPreferredInstrument(e.target.value)} />
                     </div>
                     <div>
                         <label htmlFor = "platform-field">How did you find out about us?</label>
-                        <select id = "platform-field" name = "platform" className = "registration-wide-input-field" value = {platform} onChange = {(e) => SetPlatform(e.target.value)}>
+                        <select id = "platform-field" name = "Platform" className = "registration-wide-input-field" value = {platform} onChange = {(e) => SetPlatform(e.target.value)}>
                             <option value="">Select an option</option>
                             <option value="kijiji">Kijiji</option>
                             <option value="social_media">Social Media</option>
@@ -209,7 +212,7 @@ Benefits of volunteering with us: <br /><br />
                     <div>
                         <label htmlFor = "lesson-times-field">Why do you want to join Music Unbounded?</label>
                         <br />
-                        <textarea name = "statement" id = "lesson-times-field" className = "registration-wide-input-field" value = {statement} onChange = {(e) => SetStatement(e.target.value)} />
+                        <textarea name = "Statement" id = "lesson-times-field" className = "registration-wide-input-field" value = {statement} onChange = {(e) => SetStatement(e.target.value)} />
                     </div>
                     <div>
                         <input value = {checkbox_checked} onChange = {(e) => SetCheckboxChecked(!checkbox_checked)} id = "teacher-guidelines-checkbox" type = "checkbox" />
