@@ -6,23 +6,31 @@ function Redirect()
     window.location.href = "/thank-you"
 }
 
-function SubmitRegistration(event)
-{
-    event.preventDefault();
-    const url = "https://script.google.com/macros/s/AKfycbzbknbXB0Lv6ITPCxbyEaGUkpkiQsvOBkQ_kOUmQobDSi6Yl1i-bURMWuuV4AKKOoWM/exec";
-    const form = document.forms['sheets-form'];
-    fetch(url, { method: 'POST', body: new FormData(form)})
-    .then(response => Redirect())
-    .catch(error => alert(error.message))
-}
-
 export default function Register()
 {
+    const [submit_disabled, SetSubmitDisabled] = useState(false);
+
+    function SubmitRegistration(event)
+    {
+        if (submit_disabled === true)
+        {
+            event.preventDefault();
+            return;
+        }
+        SetSubmitDisabled(true);
+        event.preventDefault();
+        const url = "https://script.google.com/macros/s/AKfycbzbknbXB0Lv6ITPCxbyEaGUkpkiQsvOBkQ_kOUmQobDSi6Yl1i-bURMWuuV4AKKOoWM/exec";
+        const form = document.forms['sheets-form'];
+        fetch(url, { method: 'POST', body: new FormData(form)})
+        .then(response => Redirect())
+        .catch()
+    }
+
     return (
         <div id = "register-page-wrapper">
             <div id = "register-title">Register</div>
             <div id = "register-form">
-                <form name = "sheets-form" method = 'POST' onSubmit = {SubmitRegistration}>
+                <form name = "sheets-form" onSubmit = {SubmitRegistration}>
                     <div>
                         <label htmlFor = "guardian-full-name-field">Guardian Full Name</label>
                         <br />
@@ -103,7 +111,7 @@ export default function Register()
                         <br />
                     </div>
                     <br />
-                    <input id = "submit-button" type = "submit" />
+                    <input disabled = {submit_disabled} id = "submit-button" type = "submit" />
                 </form>
             </div>
         </div>

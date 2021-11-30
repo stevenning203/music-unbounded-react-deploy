@@ -10,6 +10,7 @@ function Volunteer()
 {
     const [show_teacher_guidelines, SetShowTeacherGuidelines] = useState(false);
     const [teacher_guidelines_read, SetTeacherGuidelinesRead] = useState(false);
+    const [submit_disabled, SetSubmitDisabled] = useState(false);
 
     function SetTeacherGuidelines()
     {
@@ -17,19 +18,25 @@ function Volunteer()
         SetTeacherGuidelinesRead(true);
     }
 
-    function SubmitApplication(e)
+    function SubmitApplication(event)
     {
-        e.preventDefault();
+        if (submit_disabled === true)
+        {
+            event.preventDefault();
+            return;
+        }
+        event.preventDefault();
         if (!teacher_guidelines_read)
         {
             alert("You did not open the teacher guidelines. Please open them and read them.");
             return;
         }
+        SetSubmitDisabled(true);
         const form = document.forms['sheets-form-app'];
         fetch("https://script.google.com/macros/s/AKfycbwuX-nKLoOjNGFtRTUWZXWyEeGKH9B2opIz_M72P1Sk3SOyE_AI3XR3Uzm8c9b6paEhzQ/exec",
         {method: 'POST', body: new FormData(form)})
         .then(response => Redirect())
-    .catch(error => alert(error.message))
+        .catch()
     }
 
     return (
@@ -144,7 +151,7 @@ function Volunteer()
                         <br />
                         <br />
                     </div>
-                    <input id = "submit-button" type = "submit" />
+                    <input disabled = {submit_disabled} id = "submit-button" type = "submit" />
                 </form>
             </div>
         </div>
