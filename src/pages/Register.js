@@ -41,7 +41,7 @@ export default function Register()
                     <div>
                         <label htmlFor = "phone-number-field">Phone Number (optional)</label>
                         <br />
-                        <input name = "Phone Number" id = "phone-number-field" className = "registration-wide-input-field" type = "text" required/>
+                        <input name = "Phone Number" id = "phone-number-field" className = "registration-wide-input-field" type = "text"/>
                     </div>
                     <div>
                         <input name = "Contact by PN?" id = "phone-checkbox" type = "checkbox" />

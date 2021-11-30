@@ -1,112 +1,35 @@
 import React, {useState} from 'react';
 import './Volunteer.css';
 
-function CheckFormValidity(FormArray)
-{
-    for (var i = 0; i < FormArray.length; i++)
-    {
-        if (FormArray[i] == "" && (i != 3 && i != 4))
-        {
-            return false;
-        }
-    }
-    return true;
-}
-
-function GetBody(FormArray)
-{
-    const label_array = ["Teacher Name", "Age", "Email", "Phone number", "Please contact by phone number", "Instrument", "Found out about us from", "Statement about why"];
-
-    let body = "";
-
-    for (let i = 0; i < 8; i++)
-    {
-        body += "<strong>" + label_array[i] + "</strong>" + ": " + FormArray[i] + "<br><br>";
-    }
-
-    return body;
-}
-
-function GetThankYou()
-{
-    var response = "Thank you so much for registering with us! We will be in touch within two weeks!";
-	response += "<br><br>";
-	response += "This is an automated email which is not monitored. Do not reply to this email. If you have any questions or concerns, please email us at info@musicunbounded.org";
-    return response;
-}
-
 function Redirect()
 {
     window.location.href = "/thank-you";
 }
 
-function HandleRegistration(e, FormArray, teacher_guidelines_read, checkbox_checked)
-{
-    if (!CheckFormValidity(FormArray))
-    {
-        alert("Please fill all required fields")
-        return;
-    }
-
-    if (!teacher_guidelines_read)
-    {
-        alert("You did not open the teacher guidelines. Please open and read the teacher guidelines.");
-        return;
-    }
-
-    if (!checkbox_checked)
-    {
-        alert("You did not agree to the teacher guidelines. Please agree to them before submitting.");
-        return;
-    }
-
-    window.Email.send(
-        {
-            SecureToken: "37a95e7b-7fdd-4c23-8164-65168edc77f4",
-            To: "register.musicunbounded@gmail.com",
-            From: "noreplymusicunbounded@gmail.com",
-            Subject: "Automatic Teacher Registration",
-            Body: GetBody(FormArray),
-        }).then(() => null);
-
-    window.Email.send(
-        {
-            SecureToken: "37a95e7b-7fdd-4c23-8164-65168edc77f4",
-            To: FormArray[2],
-            From: "MU@musicunbounded.org",
-            Subject: "Application Confirmation from M.U.",
-            Body: GetThankYou(),
-        }).then(() => Redirect());
-}
-
-function SubmitApplication(e)
-{
-    const form = document.forms['sheets-form-app'];
-    e.preventDefault();
-    fetch("https://script.google.com/macros/s/AKfycbwuX-nKLoOjNGFtRTUWZXWyEeGKH9B2opIz_M72P1Sk3SOyE_AI3XR3Uzm8c9b6paEhzQ/exec",
-    {method: 'POST', body: new FormData(form)})
-    .then(Redirect())
-    .catch()
-}
-
 function Volunteer()
 {
-    const [teacher_name, SetTeacherName] = useState("");
-    const [email, SetEmail] = useState("");
-    const [age, SetAge] = useState("");
-    const [phone_number, SetPhoneNumber] = useState("");
-    const [contact_by_phone, SetContactByPhone] = useState(false);
-    const [preferred_instrument, SetPreferredInstrument] = useState("");
-    const [platform, SetPlatform] = useState("");
-    const [statement, SetStatement] = useState("");
     const [show_teacher_guidelines, SetShowTeacherGuidelines] = useState(false);
     const [teacher_guidelines_read, SetTeacherGuidelinesRead] = useState(false);
-    const [checkbox_checked, SetCheckboxChecked] = useState(false);
 
     function SetTeacherGuidelines()
     {
         SetShowTeacherGuidelines(true);
         SetTeacherGuidelinesRead(true);
+    }
+
+    function SubmitApplication(e)
+    {
+        e.preventDefault();
+        if (!teacher_guidelines_read)
+        {
+            alert("You did not open the teacher guidelines. Please open them and read them.");
+            return;
+        }
+        const form = document.forms['sheets-form-app'];
+        fetch("https://script.google.com/macros/s/AKfycbwuX-nKLoOjNGFtRTUWZXWyEeGKH9B2opIz_M72P1Sk3SOyE_AI3XR3Uzm8c9b6paEhzQ/exec",
+        {method: 'POST', body: new FormData(form)})
+        .then(response => Redirect())
+    .catch(error => alert(error.message))
     }
 
     return (
@@ -170,36 +93,36 @@ function Volunteer()
                     <div>
                         <label htmlFor = "teacher-full-name-field">Teacher Full Name</label>
                         <br />
-                        <input id = "teacher-full-name-field" className = "registration-wide-input-field" name = "Teacher Name" type = "text" value = {teacher_name} onChange = {(e) => SetTeacherName(e.target.value)} />
+                        <input id = "teacher-full-name-field" className = "registration-wide-input-field" name = "Teacher Name" type = "text" required/>
                     </div>
                     <div>
                         <label htmlFor = "email-field">Email</label>
                         <br />
-                        <input name = "Email" id = "email-field" className = "registration-wide-input-field" type = "text" value = {email} onChange = {(e) => SetEmail(e.target.value)} />
+                        <input name = "Email" id = "email-field" className = "registration-wide-input-field" type = "text" required/>
                     </div>
                     <div>
                         <label htmlFor = "age-field">Age</label>
                         <br />
-                        <input name = "Age" id = "age-field" className = "registration-wide-input-field" type = "text" value = {age} onChange = {(e) => SetAge(e.target.value)} />
+                        <input name = "Age" id = "age-field" className = "registration-wide-input-field" type = "text" required/>
                     </div>
                     <div>
                         <label htmlFor = "phone-number-field">Phone Number (optional)</label>
                         <br />
-                        <input name = "Phone Number" id = "phone-number-field" className = "registration-wide-input-field" type = "text" value = {phone_number} onChange = {(e) => SetPhoneNumber(e.target.value)} />
+                        <input name = "Phone Number" id = "phone-number-field" className = "registration-wide-input-field" type = "text"/>
                     </div>
                     <div>
-                        <input name = "Contact by PN?" id = "phone-checkbox" type = "checkbox" value = {contact_by_phone} onChange = {(e) => SetContactByPhone(!contact_by_phone)} />
+                        <input name = "Contact by PN?" id = "phone-checkbox" type = "checkbox"/>
                         <label htmlFor = "phone-checkbox"> I would prefer to be contacted by phone</label>
                         <br />
                         <br />
                     </div>
                     <div>
                         <label htmlFor = "preferred-instrument-field">What instrument(s) would you like to teach?</label>
-                        <input id = "preferred-instrument-field" name = "Instrument" className = "registration-wide-input-field" value = {preferred_instrument} onChange = {(e) => SetPreferredInstrument(e.target.value)} />
+                        <input id = "preferred-instrument-field" name = "Instrument" className = "registration-wide-input-field" required/>
                     </div>
                     <div>
                         <label htmlFor = "platform-field">How did you find out about us?</label>
-                        <select id = "platform-field" name = "Platform" className = "registration-wide-input-field" value = {platform} onChange = {(e) => SetPlatform(e.target.value)}>
+                        <select id = "platform-field" name = "Platform" className = "registration-wide-input-field" required>
                             <option value="">Select an option</option>
                             <option value="kijiji">Kijiji</option>
                             <option value="social_media">Social Media</option>
@@ -212,10 +135,10 @@ function Volunteer()
                     <div>
                         <label htmlFor = "lesson-times-field">Why do you want to join Music Unbounded?</label>
                         <br />
-                        <textarea name = "Statement" id = "lesson-times-field" className = "registration-wide-input-field" value = {statement} onChange = {(e) => SetStatement(e.target.value)} />
+                        <textarea name = "Statement" id = "lesson-times-field" className = "registration-wide-input-field" required/>
                     </div>
                     <div>
-                        <input value = {checkbox_checked} onChange = {(e) => SetCheckboxChecked(!checkbox_checked)} id = "teacher-guidelines-checkbox" type = "checkbox" />
+                        <input id = "teacher-guidelines-checkbox" type = "checkbox" required/>
                         <label htmlFor = "teacher-guidelines-checkbox"> I agree to the </label>
                         <div id = "teacher-guidelines-trigger" onClick = {() => SetTeacherGuidelines()}>Teacher Guidelines</div>
                         <br />
