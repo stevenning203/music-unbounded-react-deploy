@@ -9,6 +9,7 @@ function Redirect()
 export default function Register()
 {
     const [submit_disabled, SetSubmitDisabled] = useState(false);
+    const [submit_button_name, SetSubmitButtonName] = useState("Submit");
 
     function SubmitRegistration(event)
     {
@@ -18,6 +19,7 @@ export default function Register()
             return;
         }
         SetSubmitDisabled(true);
+        SetSubmitButtonName("Please wait...")
         event.preventDefault();
         const url = "https://script.google.com/macros/s/AKfycbzbknbXB0Lv6ITPCxbyEaGUkpkiQsvOBkQ_kOUmQobDSi6Yl1i-bURMWuuV4AKKOoWM/exec";
         const form = document.forms['sheets-form'];
@@ -111,7 +113,7 @@ export default function Register()
                         <br />
                     </div>
                     <br />
-                    <input disabled = {submit_disabled} id = "submit-button" type = "submit" />
+                    <input value = {submit_button_name} disabled = {submit_disabled} id = "submit-button" type = "submit" />
                 </form>
             </div>
         </div>

@@ -10,6 +10,7 @@ export default function Contact()
 {
     const [checkbox_checked, SetCheckboxChecked] = useState("");
     const [submit_disabled, SetSubmitDisabled] = useState(false);
+    const [submit_button_name, SetSubmitButtonName] = useState("Submit");
 
     function SubmitContact(event)
     {
@@ -19,12 +20,13 @@ export default function Contact()
             return;
         }
         event.preventDefault();
-        SetSubmitDisabled(true);
         if (!checkbox_checked)
         {
             alert("You did not agree that you read the Q&A. Please make sure your question has not already been answered and agree to the checkbox.")
             return;
         }
+        SetSubmitDisabled(true);
+        SetSubmitButtonName("Please wait...")
         const form = document.forms['sheets-form-cont'];
         fetch("https://script.google.com/macros/s/AKfycbwHPcwY2cs-Z7x_WFZx89cvvPAAPWZAp9DdROVJccBeRKV1_3XCPhPTlYvmzRQP-zIu/exec",
         {method: 'POST', body: new FormData(form)})
@@ -72,7 +74,7 @@ export default function Contact()
                         <label htmlFor = "contact-faq-checkbox"> I have read the Q&A on the help page</label>
                         <br />
                         <br />
-                <input disabled = {submit_disabled} type = "submit" id = "submit-button" />
+                <input value = {submit_button_name} disabled = {submit_disabled} type = "submit" id = "submit-button" />
             </form>
         </div>
     )

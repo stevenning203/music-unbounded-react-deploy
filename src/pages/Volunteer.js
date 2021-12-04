@@ -11,6 +11,7 @@ function Volunteer()
     const [show_teacher_guidelines, SetShowTeacherGuidelines] = useState(false);
     const [teacher_guidelines_read, SetTeacherGuidelinesRead] = useState(false);
     const [submit_disabled, SetSubmitDisabled] = useState(false);
+    const [submit_button_name, SetSubmitButtonName] = useState("Submit");
 
     function SetTeacherGuidelines()
     {
@@ -32,6 +33,7 @@ function Volunteer()
             return;
         }
         SetSubmitDisabled(true);
+        SetSubmitButtonName("Please wait...")
         const form = document.forms['sheets-form-app'];
         fetch("https://script.google.com/macros/s/AKfycbwuX-nKLoOjNGFtRTUWZXWyEeGKH9B2opIz_M72P1Sk3SOyE_AI3XR3Uzm8c9b6paEhzQ/exec",
         {method: 'POST', body: new FormData(form)})
@@ -151,7 +153,7 @@ function Volunteer()
                         <br />
                         <br />
                     </div>
-                    <input disabled = {submit_disabled} id = "submit-button" type = "submit" />
+                    <input value = {submit_button_name} disabled = {submit_disabled} id = "submit-button" type = "submit" />
                 </form>
             </div>
         </div>
