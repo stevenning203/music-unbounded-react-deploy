@@ -84,7 +84,6 @@ export default function Register()
                             <option value="guitar" disabled>Guitar [unavailable]</option>
                             <option value="cello">Cello</option>
                             <option value="trombone">Trombone</option>
-                            <option value="theory">Music Theory</option>
                         </select>
                     </div>
                     <div>
