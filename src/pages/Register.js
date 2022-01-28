@@ -49,6 +49,11 @@ export default function Register()
                         <input name = "Email" id = "email-field" className = "registration-wide-input-field" type = "text" required/>
                     </div>
                     <div>
+                        <label htmlFor = "age-field">Student's Age</label>
+                        <br />
+                        <input name = "Age" id = "age-field" className = "registration-wide-input-field" type = "text" required />
+                    </div>
+                    <div>
                         <label htmlFor = "phone-number-field">Phone Number (optional)</label>
                         <br />
                         <input name = "Phone Number" id = "phone-number-field" className = "registration-wide-input-field" type = "text"/>
@@ -83,7 +88,7 @@ export default function Register()
                             <option value="piano">Piano</option>
                             <option value="guitar" disabled>Guitar [unavailable]</option>
                             <option value="cello">Cello</option>
-                            <option value="trombone">Trombone</option>
+                            <option value="trombone" disabled>Trombone [unavailable]</option>
                         </select>
                     </div>
                     <div>

@@ -27,7 +27,7 @@ function HomePageSecond()
                     <div class = "accordian-blurb-text"><strong>The Piano</strong><br /><br />A popular and versatile instrument, the piano is one of the best choices for beginners because of its simplicity. Many people know famous composers and songs for the piano.</div>
                 </div>
                 } content_class_name = "accordian-content" button_class_name = "accordian-button" wrapper_class_name = "accordian" title_class_name = "accordian-title"/>
-                <Accordian title = "Trombone" content = {
+                <Accordian title = "Trombone [unavailable]" content = {
                 <div class = "accordian-blurb">
                     <img src = {trombone} />
                     <div class = "accordian-blurb-text"><strong>The Trombone</strong><br /><br />A brass instrument that requires excellent command of embouchure and breathing. It has a deep tone that makes it desirable in in symphony orchestras, jazz bands, and more.</div>

@@ -60,6 +60,7 @@ function Volunteer()
             </div>
             <div className = "volunteer-req">
                 All teachers that apply undergo a short interview and audition process.
+                A volunteer police check is also required, but we will subsidize the cost up to $20 out of $20.
             </div>
             <div className = "volunteer-title">Application Form</div>
             <div id = "volunteer-form">
