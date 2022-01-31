@@ -115,6 +115,9 @@ export default function Register()
                         &sup1;
                          Note: If you select "either is fine," you will be more likely to be matched up. Additonally, in person lessons will be held at either the student's household or the teacher's. If in person is selected, the location will be decided by the student and the teacher together.
                         <br />
+                        <br />
+                        * Note: In person lessons are only available in Edmonton and Calgary.
+                        <br />
                     </div>
                     <br />
                     <input value = {submit_button_name} disabled = {submit_disabled} id = "submit-button" type = "submit" />
