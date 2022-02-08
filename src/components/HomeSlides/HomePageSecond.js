@@ -5,6 +5,7 @@ import trombone from '../../assets/trombone.jpg';
 import viola from '../../assets/viola.jpg';
 import guitar from '../../assets/guitar.jpg';
 import cello from '../../assets/cello.jpg';
+import flute from '../../assets/flute.jpeg';
 import theory from '../../assets/theory.jpg';
 import Accordian from './Accordian/Accordian';
 import './HomePageSecond.css';
@@ -19,6 +20,12 @@ function HomePageSecond()
                 <div class = "accordian-blurb">
                     <img src = {violin} />
                     <div class = "accordian-blurb-text"><strong>The Violin</strong><br /><br />The violin is a bowed stringed instrument which gained popularity during the 16th century. The violin is known for its unique vocal quality and is often the focus in many symphony orchestras.</div>
+                </div>
+                } content_class_name = "accordian-content" button_class_name = "accordian-button" wrapper_class_name = "accordian" title_class_name = "accordian-title"/>
+                <Accordian title = "Flute" content = {
+                    <div class = "accordian-blurb">
+                    <img src = {flute} />
+                    <div class = "accordian-blurb-text"><strong>The Flute</strong><br /><br />The flute is a lightweight instrument capable of producing a clear and bright sound with a distinctive warmth, refinement, and subtlety to its tone.</div>
                 </div>
                 } content_class_name = "accordian-content" button_class_name = "accordian-button" wrapper_class_name = "accordian" title_class_name = "accordian-title"/>
                 <Accordian title = "Piano" content = {
