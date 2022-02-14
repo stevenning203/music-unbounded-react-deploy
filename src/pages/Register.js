@@ -75,7 +75,7 @@ export default function Register()
                         <select name = "Online?" id = "preferred-location-field" className = "registration-wide-input-field" required>
                             <option value = "">Select an option</option>
                             <option value = "in_person">In person</option>
-                            <option value = "online">Online</option>
+                            <option value = "online" disabled>Online</option>
                             <option value = "either">Either is fine</option>
                         </select>
                     </div>
