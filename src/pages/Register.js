@@ -74,9 +74,9 @@ export default function Register()
                         <br />
                         <select name = "Online?" id = "preferred-location-field" className = "registration-wide-input-field" required>
                             <option value = "">Select an option</option>
-                            <option value = "in_person">In person</option>
-                            <option value = "online" disabled>Online</option>
-                            <option value = "either">Either is fine</option>
+                            <option value = "in_person" disabled>In person</option>
+                            <option value = "online">Online</option>
+                            <option value = "either" disabled>Either is fine</option>
                         </select>
                     </div>
                     <div>
@@ -117,7 +117,7 @@ export default function Register()
                          Note: If you select "either is fine," you will be more likely to be matched up. Additonally, in person lessons will be held at either the student's household or the teacher's. If in person is selected, the location will be decided by the student and the teacher together.
                         <br />
                         <br />
-                        * Note: In person lessons are only available in Edmonton and Calgary.
+                        * Note: In person lessons are not available right now.
                         <br />
                     </div>
                     <br />
