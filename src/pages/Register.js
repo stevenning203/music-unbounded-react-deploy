@@ -83,12 +83,12 @@ export default function Register()
                         <label htmlFor = "preferred-instrument-field">Preferred Instrument &sup2;</label>
                         <select id = "preferred-instrument-field" name = "Preferred Instrument" className = "registration-wide-input-field" required>
                             <option value="">Select an option</option>
-                            <option value="viola">Viola</option>
-                            <option value="violin">Violin</option>
-                            <option value="piano" disabled>Piano [unavaiable]</option>
-                            <option value="flute">Flute</option>
+                            <option value="cello" disabled>Cello </option>
+                            <option value="viola" disabled>Viola [unavailable]</option>
+                            <option value="violin" disabled>Violin [unavailable]</option>
+                            <option value="piano" disabled>Piano [unavailable]</option>
+                            <option value="flute" disabled>Flute [unavailable]</option>
                             <option value="guitar" disabled>Guitar [unavailable]</option>
-                            <option value="cello">Cello</option>
                             <option value="trombone" disabled>Trombone [unavailable]</option>
                         </select>
                     </div>
@@ -120,7 +120,7 @@ export default function Register()
                         * Note: In person lessons are not available right now.
                         <br />
                         <br />
-                        * Note: Piano is full. We are currently not accepting piano students, but we will open up registration
+                        * Note: Multiple instruments are full. We are currently not accepting students for those instruments, but we will open up registration
                         when spaces become available.
                         <br />
                     </div>

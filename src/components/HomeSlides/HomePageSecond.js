@@ -16,19 +16,19 @@ function HomePageSecond()
         <div id = "home-page-second">
             <div id = "home-page-second-title">Instruments We Teach</div>
             <div id = "home-page-second-catalog">
-                <Accordian title = "Violin" content = {
+                <Accordian title = "Violin [unavailable]" content = {
                 <div class = "accordian-blurb">
                     <img src = {violin} />
                     <div class = "accordian-blurb-text"><strong>The Violin</strong><br /><br />The violin is a bowed stringed instrument which gained popularity during the 16th century. The violin is known for its unique vocal quality and is often the focus in many symphony orchestras.</div>
                 </div>
                 } content_class_name = "accordian-content" button_class_name = "accordian-button" wrapper_class_name = "accordian" title_class_name = "accordian-title"/>
-                <Accordian title = "Flute" content = {
+                <Accordian title = "Flute [unavailable]" content = {
                     <div class = "accordian-blurb">
                     <img src = {flute} />
                     <div class = "accordian-blurb-text"><strong>The Flute</strong><br /><br />The flute is a lightweight instrument capable of producing a clear and bright sound with a distinctive warmth, refinement, and subtlety to its tone.</div>
                 </div>
                 } content_class_name = "accordian-content" button_class_name = "accordian-button" wrapper_class_name = "accordian" title_class_name = "accordian-title"/>
-                <Accordian title = "Piano" content = {
+                <Accordian title = "Piano [unavailable]" content = {
                 <div class = "accordian-blurb">
                     <img src = {piano} />
                     <div class = "accordian-blurb-text"><strong>The Piano</strong><br /><br />A popular and versatile instrument, the piano is one of the best choices for beginners because of its simplicity. Many people know famous composers and songs for the piano.</div>
@@ -40,7 +40,7 @@ function HomePageSecond()
                     <div class = "accordian-blurb-text"><strong>The Trombone</strong><br /><br />A brass instrument that requires excellent command of embouchure and breathing. It has a deep tone that makes it desirable in in symphony orchestras, jazz bands, and more.</div>
                 </div>
                 } content_class_name = "accordian-content" button_class_name = "accordian-button" wrapper_class_name = "accordian" title_class_name = "accordian-title"/>
-                <Accordian title = "Viola" content = {
+                <Accordian title = "Viola [unavailable]" content = {
                 <div class = "accordian-blurb">
                     <img src = {viola} />
                     <div class = "accordian-blurb-text"><strong>The Viola</strong><br /><br />While similar in appearance to the violin, the viola acts as the sweeter inner voice of any orchestra.</div>
