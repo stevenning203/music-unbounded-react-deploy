@@ -15,7 +15,7 @@ function About()
                 Who We Are
             </div>
             <div id = "about-who-we-are-blurb">
-                Music Unbounded is a student-run organization aimed at providing an opportunity for children and youth K-9 to learn music through free introductory lessons instructed by passionate volunteers. 
+                Music Unbounded is a student-run organization aimed at providing an opportunity for children and youth 4-18 to learn music through free introductory lessons instructed by passionate volunteers. 
             </div>
         </div>
         {!IsMobile() && <div id = "about-why-wrapper-pc">

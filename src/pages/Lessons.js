@@ -14,7 +14,7 @@ export default function Lessons()
                 Who can apply?
             </div>
             <div className = "lessons-blurb">
-                Any child/youth currently enrolled in grades K-9 and are under the age of 16 are eligible to become a Music Unbounded student. Our lessons are meant to be an introductory course for anyone wanting to discover a new passion!
+                Any child/youth under the age of 19 are eligible to become a Music Unbounded student. Our lessons are meant to be an introductory course for anyone wanting to discover a new passion!
             </div>
             <div className = "lessons-subtitle">
                 Where can I take lessons?

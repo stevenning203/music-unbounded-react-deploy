@@ -1,0 +1,11 @@
+#donate-title {
+    margin-top: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+
+#donate-blurb {
+    margin-left: 20%;
+    min-height: 200vh;
+}

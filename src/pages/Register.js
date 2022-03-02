@@ -85,7 +85,7 @@ export default function Register()
                             <option value="">Select an option</option>
                             <option value="viola">Viola</option>
                             <option value="violin">Violin</option>
-                            <option value="piano">Piano</option>
+                            <option value="piano" disabled>Piano [unavaiable]</option>
                             <option value="flute">Flute</option>
                             <option value="guitar" disabled>Guitar [unavailable]</option>
                             <option value="cello">Cello</option>
@@ -118,6 +118,10 @@ export default function Register()
                         <br />
                         <br />
                         * Note: In person lessons are not available right now.
+                        <br />
+                        <br />
+                        * Note: Piano is full. We are currently not accepting piano students, but we will open up registration
+                        when spaces become available.
                         <br />
                     </div>
                     <br />

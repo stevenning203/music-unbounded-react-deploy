@@ -6,6 +6,7 @@ import Register from './Register';
 import OurTeam from './OurTeam';
 import Volunteer from './Volunteer';
 import Contact from './Contact';
+import Donate from './Donate';
 import ThankYou from './ThankYou';
 import Blog from './Blog';
 import NotFound from './NotFound';
@@ -40,10 +41,13 @@ function Web()
                             <Link to = '/volunteer'>Volunteer</Link>
                         </li>
                         <li>
-                            <Link to = '/contact'>Contact</Link>
+                            <Link to = '/our-team'>Our Team</Link>
                         </li>
                         <li>
-                            <Link to = '/our-team'>Our Team</Link>
+                            <Link to = '/donate'>Donate</Link>
+                        </li>
+                        <li>
+                            <Link to = '/contact'>Contact</Link>
                         </li>
                         <li>
                             <Link to = '/help'>Help</Link>
@@ -60,7 +64,7 @@ function Web()
                 (IsMobile() && navbar_open) &&
                 <div id = "mobile-navbar-dropdown-wrapper">
                     <ul id = "mobile-navbar-dropdown">
-                        <li>
+                    <li>
                             <Link to = '/about'>About</Link>
                         </li>
                         <li>
@@ -73,10 +77,13 @@ function Web()
                             <Link to = '/volunteer'>Volunteer</Link>
                         </li>
                         <li>
-                            <Link to = '/contact'>Contact</Link>
+                            <Link to = '/our-team'>Our Team</Link>
                         </li>
                         <li>
-                            <Link to = '/our-team'>Our Team</Link>
+                            <Link to = '/donate'>Donate</Link>
+                        </li>
+                        <li>
+                            <Link to = '/contact'>Contact</Link>
                         </li>
                         <li>
                             <Link to = '/help'>Help</Link>
@@ -113,8 +120,8 @@ function Web()
                 <Route path = "/help">
                     <Help />
                 </Route>
-                <Route path = "/blog">
-                    <Blog />
+                <Route path = "/donate">
+                    <Donate />
                 </Route>
                 <Route path = "*" exact = {true} component = {NotFound} />
             </Switch>
