@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.6971208b.chunk.css",
-    "main.js": "/static/js/main.9402cb84.chunk.js",
-    "main.js.map": "/static/js/main.9402cb84.chunk.js.map",
+    "main.css": "/static/css/main.8b48b743.chunk.css",
+    "main.js": "/static/js/main.2f9aa58e.chunk.js",
+    "main.js.map": "/static/js/main.2f9aa58e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d2179b02.js",
     "runtime-main.js.map": "/static/js/runtime-main.d2179b02.js.map",
-    "static/js/2.ce66ed3b.chunk.js": "/static/js/2.ce66ed3b.chunk.js",
-    "static/js/2.ce66ed3b.chunk.js.map": "/static/js/2.ce66ed3b.chunk.js.map",
+    "static/css/2.c6ef8b52.chunk.css": "/static/css/2.c6ef8b52.chunk.css",
+    "static/js/2.fe055206.chunk.js": "/static/js/2.fe055206.chunk.js",
+    "static/js/2.fe055206.chunk.js.map": "/static/js/2.fe055206.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.6971208b.chunk.css.map": "/static/css/main.6971208b.chunk.css.map",
-    "static/js/2.ce66ed3b.chunk.js.LICENSE.txt": "/static/js/2.ce66ed3b.chunk.js.LICENSE.txt",
+    "static/css/2.c6ef8b52.chunk.css.map": "/static/css/2.c6ef8b52.chunk.css.map",
+    "static/css/main.8b48b743.chunk.css.map": "/static/css/main.8b48b743.chunk.css.map",
+    "static/js/2.fe055206.chunk.js.LICENSE.txt": "/static/js/2.fe055206.chunk.js.LICENSE.txt",
     "static/media/alex_cai.cb4d206d.png": "/static/media/alex_cai.cb4d206d.png",
     "static/media/andrew_zhang.ed3bbc3e.png": "/static/media/andrew_zhang.ed3bbc3e.png",
     "static/media/binoo.189d1b50.png": "/static/media/binoo.189d1b50.png",
@@ -23,6 +25,7 @@
     "static/media/guitar.1e6fb172.jpg": "/static/media/guitar.1e6fb172.jpg",
     "static/media/hannah_kim.edd6c049.png": "/static/media/hannah_kim.edd6c049.png",
     "static/media/hannah_liu.827d9b01.png": "/static/media/hannah_liu.827d9b01.png",
+    "static/media/insta-iconhm.98597ee4.png": "/static/media/insta-iconhm.98597ee4.png",
     "static/media/jason_tao.86ccd7e2.png": "/static/media/jason_tao.86ccd7e2.png",
     "static/media/jason_wong.b83e08b9.png": "/static/media/jason_wong.b83e08b9.png",
     "static/media/jessica_chen.d72dcb95.png": "/static/media/jessica_chen.d72dcb95.png",
@@ -43,8 +46,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d2179b02.js",
-    "static/js/2.ce66ed3b.chunk.js",
-    "static/css/main.6971208b.chunk.css",
-    "static/js/main.9402cb84.chunk.js"
+    "static/css/2.c6ef8b52.chunk.css",
+    "static/js/2.fe055206.chunk.js",
+    "static/css/main.8b48b743.chunk.css",
+    "static/js/main.2f9aa58e.chunk.js"
   ]
 }
