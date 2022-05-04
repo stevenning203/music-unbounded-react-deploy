@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.8b48b743.chunk.css",
-    "main.js": "/static/js/main.2f9aa58e.chunk.js",
-    "main.js.map": "/static/js/main.2f9aa58e.chunk.js.map",
+    "main.js": "/static/js/main.23dead44.chunk.js",
+    "main.js.map": "/static/js/main.23dead44.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d2179b02.js",
     "runtime-main.js.map": "/static/js/runtime-main.d2179b02.js.map",
     "static/css/2.c6ef8b52.chunk.css": "/static/css/2.c6ef8b52.chunk.css",
@@ -32,6 +32,7 @@
     "static/media/kayla_thai.85ccecf4.png": "/static/media/kayla_thai.85ccecf4.png",
     "static/media/landy_huang.53211e07.png": "/static/media/landy_huang.53211e07.png",
     "static/media/lisa_wong.4f9a680a.png": "/static/media/lisa_wong.4f9a680a.png",
+    "static/media/logo0000.f758e68b.png": "/static/media/logo0000.f758e68b.png",
     "static/media/HomePageFirst.css": "/static/media/main_background.ea166559.png",
     "static/media/marcus_wong.b54a4374.png": "/static/media/marcus_wong.b54a4374.png",
     "static/media/mark_maclure.94382b31.png": "/static/media/mark_maclure.94382b31.png",
@@ -49,6 +50,6 @@
     "static/css/2.c6ef8b52.chunk.css",
     "static/js/2.fe055206.chunk.js",
     "static/css/main.8b48b743.chunk.css",
-    "static/js/main.2f9aa58e.chunk.js"
+    "static/js/main.23dead44.chunk.js"
   ]
 }
